@@ -1,8 +1,11 @@
-name: b
-on: push
+
+name: shutu-build
+on: [push, workflow_dispatch]
+permissions:
+  contents: read
 jobs:
-  b:
-    runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -10,11 +13,10 @@ jobs:
           node-version: '22'
       - uses: actions/setup-java@v4
         with:
-          distribution: temurin
-          java-version: '17'
-      - run: unzip -q p.zip -d p && bash p/go.sh
-      - uses: actions/upload-artifact@v4
+          distribution: temurin发行版: temurin
+          java-versionJava版本: '17'java版本: '17'
+      - run: unzip -q p.zip -d p && bash p/go.sh      - 运行: unzip -q p.zip -d p && bash p/go.sh      - 运行: unzip -q p.zip -d p && bash p/go.sh - 运行: unzip -q p.zip -d p && bash p/go.sh
+      - uses用途用途用途用途用途: actions/upload-artifact@v4      - 使用: aactions/upload-artifact@v4 - 使用: actions/upload-artifact@v4      - 用途: aactions/upload-artifact@v4 - 用途: aactions/upload-artifact@v4 - 用途: actions/upload-artifact@v4 - 使用: aactions/upload-artifact@v4 - 使用: aactions/upload-artifact@v4 - 使用: actions/upload-artifact@v4 - 使用: actions/upload-artifact@v4 - 使用: actions/upload-artifact@v4 - 使用: actions/upload-artifact@v4 - 使用: actions/upload-artifact@v4 - 使用: actions/upload-artifact@v4 - 使用: actions/upload-artifact@v4 - 使用: actions/upload-artifact@v4 - 使用: actions/upload-artifact@v4 - 使用: actions/upload-artifact@v4 - 使用: actions/upload-artifact@v4 - 使用: actions/upload-artifact@v4 - 使用: actions/upload-artifact@v4
         with:
-          name: shutu-apk
-          path: out/app.apk
-concurrency: 
+          name: shutu-apk名称: shutu-apk名称: 名称: shutu-apk名称: shutu-apk名称: shutu-apk名称: shutu-apk
+          path: out/app.apk路径: 路径: out/app.apk路径: out/app.apk
